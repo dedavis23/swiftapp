@@ -12,21 +12,21 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var thelabel: UILabel!
     
-    var tapCount = 0
+    @IBOutlet weak var text1: UITextField!
+ 
+    
+    @IBOutlet weak var text2: UITextField!
     
     @IBAction func buttontapped(_ sender: Any) {
-        
-tapCount = tapCount + 1
-        if tapCount >= 10 {
-            thelabel.text = "you tapped the button 10 times"
+    
+        thelabel.text = "Answer: \(Double(text1.text!)! + Double(text2.text!)!)"
+
         }
     
-    }
-    @IBAction func button2tapped(_ sender: Any) { thelabel.text = "Hi"
-    }
+    
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
  
         self.view.backgroundColor = UIColor.red
